@@ -28,7 +28,7 @@ public class Main {
     private static void printGrid(int[][] grid) {
         for (int[] row : grid) {
             for (int cell : row) {
-                System.out.print((gameLogic.ScanPos(gameLogic.Universe, row, cell) == 1) ? "▣ " : "□ ");
+                System.out.print(cell == 1 ? "▣ " : "□ ");
             }
             System.out.println();
         }
