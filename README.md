@@ -16,6 +16,7 @@ A simple java implementation of Conway's Game of Life
 # Run Code
 ```bash
 git clone https://github.com/salmiyounes/Game-Of-Life.git
+cd Game-Of-Life
 chmod +x run.sh
 ./run.sh
 ```
