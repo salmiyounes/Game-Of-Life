@@ -1,0 +1,5 @@
+#N eater2variant2.rle
+#C https://conwaylife.com/wiki/Eater_2
+#C https://www.conwaylife.com/patterns/eater2variant2.rle
+x = 5, y = 10, rule = B3/S23
+2o$bo$bo$2ob2o$3b2o2$2ob2o$bobo$bobo$2bo!
