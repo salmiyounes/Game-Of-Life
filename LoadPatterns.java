@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class LoadPatterns {
 	public static ArrayList<String> filesNames = new ArrayList<>();
+	public static int SIZE, Lenght;
 	public static int[][] universe;
 	public static int[][] copyUniverse = new int[50][50]; 
 
@@ -24,18 +25,16 @@ public class LoadPatterns {
 		}
 	}
 
-	public void fixSize(int size) {
-		universe = new int[size][size] ; 
+	public void fixSize(int i, int j) {
+		universe = new int[i][j] ; 
 
 	}
 
 	public int[][] translateData() throws IOException {
 		Scanner scanner = new Scanner(System.in);
-		String filename = scanner.nextLine(); 
+		String filename = scanner.nextLine().strip(); 
 		BufferedReader buffer = new BufferedReader(new FileReader(String.join("/", "Patterns", filename)));
 		String[] result;
-		int i = 0;
-		int j = 0;
 		try {
 			StringBuilder string = new StringBuilder();
 			String line = buffer.readLine();
@@ -44,23 +43,36 @@ public class LoadPatterns {
 				string.append(line);
 				string.append(System.lineSeparator());
 				line = buffer.readLine();
-		} 
+		}
 		result = string.toString().split("\n");
+		int i = 0;
 		for (String l : result) {
 			if (l.startsWith("!")) {
 				continue;
 			} else {
-				for (j = 0; j < l.length(); j++) {
-					copyUniverse[i][j] = (l.charAt(j) == 'O') ? 1:0;
-				}
+				SIZE = l.length();
 				i ++;
 			}
 		}
+		Lenght = i;
 		} 
 		finally {
 			buffer.close() ;
 		}
-		return copyUniverse;
+
+		fixSize(Lenght+2, SIZE +2);
+		int i =0;
+		for (String l : result) {
+			if (l.startsWith("!")) continue;
+			else {
+				for (int j = 0; j < l.length(); j++) {
+					universe[i][j] = (l.charAt(j) == 'O') ? 1:0;
+				}
+				i ++;
+			}
+		}
+
+		return universe;
 		}
 
 
