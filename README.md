@@ -3,7 +3,7 @@ A simple java implementation of Conway's Game of Life
 
 
 
-![alt nice image](https://github.com/salmiyounes/Game-Of-Life/blob/master/nice.png)
+![alt nice image](https://github.com/salmiyounes/Game-Of-Life/blob/master/gameoflife.gif)
 
 
 # Rules
