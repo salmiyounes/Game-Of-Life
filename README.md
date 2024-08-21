@@ -1,5 +1,5 @@
 # Game-Of-Life
-A simple java implementation of Conway's Game of Life
+A simple (java and c) implementation of Conway's Game of Life
 
 
 

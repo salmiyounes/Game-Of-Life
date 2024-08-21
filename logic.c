@@ -4,8 +4,6 @@
 #include <time.h>
 #include "logic.h"
 
-#define DEAD  0
-#define ALIVE 1
 
 void fillboard(int** board, int row, int col) {
     srand(time(NULL));  
